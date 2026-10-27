@@ -31,10 +31,13 @@ No account, no cloud round-trip, no 200 MB model in the download.
 ## Feature demos
 
 ### Hold-to-talk ring
-Hold the left mouse button in a text field. A voiceprint charge ring grows smoothly around the cursor;
-the full white highlight appears at the 0.6 s trigger point.
+Hold the left mouse button in a text field. The actual voiceprint charge ring grows around the cursor;
+the full white highlight appears at the 0.6 s trigger point. This preview is a real screen recording of the app.
 
-<p align="center"><img src="docs/launch/assets/motion/ring-charge.gif" width="720" alt="Hold-to-talk ring"></p>
+<p align="center">
+  <a href="docs/launch/assets/motion/ring-demo.mov"><img src="docs/launch/assets/motion/ring-demo-poster.png" width="480" alt="Hold-to-talk ring — actual screen recording"></a>
+</p>
+<p align="center"><sub>▶ Click the preview to play the actual 3-second screen recording (MOV)</sub></p>
 
 ### Streaming local transcription
 Words appear while you are still speaking. The HUD keeps the full transcript and can be scrolled

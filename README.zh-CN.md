@@ -31,9 +31,12 @@ FocusVoice 是一个 Swift / AppKit 写的 macOS 菜单栏小工具：在任意�
 ## 功能演示
 
 ### 长按触发 · 声纹蓄力环
-在输入框里按住左键，光标旁出现声纹蓄力环，沿环平滑填充；0.6 秒充满时整圈白色高亮，松手开始收尾。
+在输入框里按住左键，光标旁出现声纹蓄力环，沿环填充；0.6 秒充满时整圈白色高亮，松手开始收尾。这里是 App 的实际录屏。
 
-<p align="center"><img src="docs/launch/assets/motion/ring-charge.gif" width="720" alt="长按蓄力环"></p>
+<p align="center">
+  <a href="docs/launch/assets/motion/ring-demo.mov"><img src="docs/launch/assets/motion/ring-demo-poster.png" width="480" alt="长按蓄力环 — App 实际录屏"></a>
+</p>
+<p align="center"><sub>▶ 点击预览播放 App 实际 3 秒录屏（MOV）</sub></p>
 
 ### 本地实时转写
 一边说一边出字。HUD 保留完整转录，可用滚轮回看；只有当你停在底部时才自动跟随最新文字。

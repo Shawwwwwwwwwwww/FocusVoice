@@ -14,7 +14,7 @@
 
 它不弹窗口，不抢焦点，也不要求你切换应用。
 
-![蓄力环动效](assets/motion/ring-demo.gif)
+[蓄力环动效（App 实际录屏，MOV）](assets/motion/ring-demo.mov)
 
 ---
 
