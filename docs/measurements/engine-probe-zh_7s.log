@@ -1,0 +1,34 @@
+== compiling C shim ==
+== compiling engine probe ==
+== running ==
+=== SenseVoiceEngine engine probe ===
+isAvailable=true location=DSH 缓存
+models: DSH 缓存：/Users/sunhui/.dsh/speech-to-text/sensevoice/models
+[whole-file] transcribeFile: 491 ms -> [我们需要在本周之前完成语音识别模块的本地化改造，确保离线也能使用。]
+[input] 7.07s audio, speech onset at 0.01s, 200 ms chunks, 500 ms leading silence
+[memory] RSS before warmUp: 867 MB
+[warmUp] 362 ms (modelLoadSeconds=0.36), RSS after warmUp 861 MB, peak 867 MB
+[update] wall=   755ms fed= 0.40s confirmed=[] partial=[我们。] (partial decode 35 ms)
+[update] wall=  1367ms fed= 1.00s confirmed=[] partial=[我们需要在本。] (partial decode 49 ms)
+[update] wall=  1976ms fed= 1.60s confirmed=[] partial=[我们需要在本周之。] (partial decode 59 ms)
+[update] wall=  2562ms fed= 2.20s confirmed=[] partial=[我们需要在本周之前完成。] (partial decode 50 ms)
+[update] wall=  3188ms fed= 2.80s confirmed=[] partial=[我们需要在本周之前完成语音。] (partial decode 71 ms)
+[update] wall=  3802ms fed= 3.40s confirmed=[] partial=[我们需要在本周之前完成语音识别模。] (partial decode 84 ms)
+[update] wall=  4399ms fed= 4.00s confirmed=[] partial=[我们需要在本周之前完成语音识别模块的本地。] (partial decode 89 ms)
+[update] wall=  5024ms fed= 4.60s confirmed=[] partial=[我们需要在本周之前完成语音识别模块的本地化改。] (partial decode 106 ms)
+[update] wall=  5623ms fed= 5.20s confirmed=[] partial=[我们需要在本周之前完成语音识别模块的本地化改造。] (partial decode 107 ms)
+[update] wall=  6239ms fed= 5.80s confirmed=[] partial=[我们需要在本周之前完成语音识别模块的本地化改造，确保离。] (partial decode 122 ms)
+[update] wall=  6853ms fed= 6.40s confirmed=[] partial=[我们需要在本周之前完成语音识别模块的本地化改造，确保离线也。] (partial decode 136 ms)
+[update] wall=  7442ms fed= 7.00s confirmed=[] partial=[我们需要在本周之前完成语音识别模块的本地化改造，确保离线也能使用。] (partial decode 127 ms)
+[update] wall=  7704ms fed= 7.07s confirmed=[我们需要在本周之前完成语音识别模块的本地化改造，确保离线也能使用。] partial=[] (partial decode 127 ms)
+[finish] 122 ms -> [我们需要在本周之前完成语音识别模块的本地化改造，确保离线也能使用。]
+[session1] wall 7704 ms for 7.07s audio (real-time feed)
+[first-partial] wall=755 ms, fed=0.40s, from speech onset=394 ms -> [我们。]
+[partial-decode] avg 86 ms, max 136 ms over 12 provisional decodes
+[updates] total=13 partial=12 confirmed=1 over 7.7s, max rate 3.0/s
+[verify] streamed == whole-file: YES
+[reuse-after-finish] 352 ms (fast feed) -> [我们需要在本周之前完成语音识别模块的本地化改造，确保离线也能使用。] MATCH
+[cancel] finish after cancel -> [] (expected empty)
+[reuse-after-cancel] -> [我们需要在本周之前完成语音识别模块的本地化改造，确保离线也能使用。] MATCH
+[memory] RSS 875 MB, peak 875 MB
+=== probe done ===

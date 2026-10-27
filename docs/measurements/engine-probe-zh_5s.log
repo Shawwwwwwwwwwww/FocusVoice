@@ -1,0 +1,30 @@
+== compiling C shim ==
+== compiling engine probe ==
+== running ==
+=== SenseVoiceEngine engine probe ===
+isAvailable=true location=DSH 本地模型缓存
+models: DSH 本地模型缓存：/Users/sunhui/.dsh/speech-to-text/sensevoice/models
+[whole-file] transcribeFile: 493 ms -> [麻烦你下班之前把设计方案的初稿发到我的邮箱。]
+[input] 4.62s audio, speech onset at 0.01s, 200 ms chunks, 500 ms leading silence
+[memory] RSS before warmUp: 860 MB
+[warmUp] 396 ms (modelLoadSeconds=0.40), RSS after warmUp 918 MB, peak 918 MB
+[update] wall=   746ms fed= 0.40s confirmed=[] partial=[麻烦。] (partial decode 34 ms)
+[update] wall=  1354ms fed= 1.00s confirmed=[] partial=[麻烦你下班。] (partial decode 44 ms)
+[update] wall=  1957ms fed= 1.60s confirmed=[] partial=[麻烦你下班之前。] (partial decode 53 ms)
+[update] wall=  2576ms fed= 2.20s confirmed=[] partial=[麻烦你下班之前把设计。] (partial decode 69 ms)
+[update] wall=  3178ms fed= 2.80s confirmed=[] partial=[麻烦你下班之前把设计方案的。] (partial decode 64 ms)
+[update] wall=  3808ms fed= 3.40s confirmed=[] partial=[麻烦你下班之前把设计方案的初稿发。] (partial decode 92 ms)
+[update] wall=  4395ms fed= 4.00s confirmed=[] partial=[麻烦你下班之前把设计方案的初稿发到我的。] (partial decode 89 ms)
+[update] wall=  5013ms fed= 4.60s confirmed=[] partial=[麻烦你下班之前把设计方案的初稿发到我的邮箱。] (partial decode 102 ms)
+[update] wall=  5215ms fed= 4.62s confirmed=[麻烦你下班之前把设计方案的初稿发到我的邮箱。] partial=[] (partial decode 102 ms)
+[finish] 89 ms -> [麻烦你下班之前把设计方案的初稿发到我的邮箱。]
+[session1] wall 5215 ms for 4.62s audio (real-time feed)
+[first-partial] wall=746 ms, fed=0.40s, from speech onset=394 ms -> [麻烦。]
+[partial-decode] avg 68 ms, max 102 ms over 8 provisional decodes
+[updates] total=9 partial=8 confirmed=1 over 5.2s, max rate 3.0/s
+[verify] streamed == whole-file: YES
+[reuse-after-finish] 164 ms (fast feed) -> [麻烦你下班之前把设计方案的初稿发到我的邮箱。] MATCH
+[cancel] finish after cancel -> [] (expected empty)
+[reuse-after-cancel] -> [麻烦你下班之前把设计方案的初稿发到我的邮箱。] MATCH
+[memory] RSS 933 MB, peak 933 MB
+=== probe done ===

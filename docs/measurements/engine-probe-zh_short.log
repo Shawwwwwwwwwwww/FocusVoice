@@ -1,0 +1,24 @@
+== compiling C shim ==
+== compiling engine probe ==
+== running ==
+=== SenseVoiceEngine engine probe ===
+isAvailable=true location=DSH 本地模型缓存
+models: DSH 本地模型缓存：/Users/sunhui/.dsh/speech-to-text/sensevoice/models
+[whole-file] transcribeFile: 434 ms -> [好的，谢谢。]
+[input] 0.85s audio, speech onset at 0.02s, 200 ms chunks, 500 ms leading silence
+[memory] RSS before warmUp: 859 MB
+[warmUp] 401 ms (modelLoadSeconds=0.40), RSS after warmUp 1107 MB, peak 1107 MB
+[update] wall=   743ms fed= 0.40s confirmed=[] partial=[好的。] (partial decode 22 ms)
+[update] wall=  1348ms fed= 0.85s confirmed=[] partial=[好的，谢谢。] (partial decode 29 ms)
+[update] wall=  1393ms fed= 0.85s confirmed=[好的，谢谢。] partial=[] (partial decode 29 ms)
+[finish] 27 ms -> [好的，谢谢。]
+[session1] wall 1393 ms for 0.85s audio (real-time feed)
+[first-partial] wall=743 ms, fed=0.40s, from speech onset=380 ms -> [好的。]
+[partial-decode] avg 25 ms, max 29 ms over 2 provisional decodes
+[updates] total=3 partial=2 confirmed=1 over 1.4s, max rate 3.0/s
+[verify] streamed == whole-file: YES
+[reuse-after-finish] 66 ms (fast feed) -> [好的，谢谢。] MATCH
+[cancel] finish after cancel -> [] (expected empty)
+[reuse-after-cancel] -> [好的，谢谢。] MATCH
+[memory] RSS 1111 MB, peak 1111 MB
+=== probe done ===

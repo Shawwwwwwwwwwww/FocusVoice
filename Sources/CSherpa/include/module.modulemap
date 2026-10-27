@@ -1,0 +1,4 @@
+module CSherpa {
+    header "FocusVoiceSherpa.h"
+    export *
+}

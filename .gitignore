@@ -1,0 +1,8 @@
+.DS_Store
+.build/
+dist/
+*.dmg
+*.xcuserstate
+*.swp
+.dsh-ref/
+/tmp/

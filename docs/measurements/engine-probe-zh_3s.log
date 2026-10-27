@@ -1,0 +1,27 @@
+== compiling C shim ==
+== compiling engine probe ==
+== running ==
+=== SenseVoiceEngine engine probe ===
+isAvailable=true location=DSH 缓存
+models: DSH 缓存：/Users/sunhui/.dsh/speech-to-text/sensevoice/models
+[whole-file] transcribeFile: 459 ms -> [明天上午10点开产品评审会。]
+[input] 3.00s audio, speech onset at 0.01s, 200 ms chunks, 500 ms leading silence
+[memory] RSS before warmUp: 925 MB
+[warmUp] 383 ms (modelLoadSeconds=0.38), RSS after warmUp 1019 MB, peak 1019 MB
+[update] wall=   752ms fed= 0.40s confirmed=[] partial=[明天。] (partial decode 37 ms)
+[update] wall=  1351ms fed= 1.00s confirmed=[] partial=[明天上午。] (partial decode 42 ms)
+[update] wall=  1959ms fed= 1.60s confirmed=[] partial=[明天上午10点开。] (partial decode 46 ms)
+[update] wall=  2564ms fed= 2.20s confirmed=[] partial=[明天上午10点开产品。] (partial decode 54 ms)
+[update] wall=  3179ms fed= 2.80s confirmed=[] partial=[明天上午10点开产品评审会。] (partial decode 73 ms)
+[update] wall=  3573ms fed= 3.00s confirmed=[明天上午10点开产品评审会。] partial=[] (partial decode 73 ms)
+[finish] 61 ms -> [明天上午10点开产品评审会。]
+[session1] wall 3573 ms for 3.00s audio (real-time feed)
+[first-partial] wall=752 ms, fed=0.40s, from speech onset=394 ms -> [明天。]
+[partial-decode] avg 51 ms, max 73 ms over 5 provisional decodes
+[updates] total=6 partial=5 confirmed=1 over 3.6s, max rate 2.0/s
+[verify] streamed == whole-file: YES
+[reuse-after-finish] 117 ms (fast feed) -> [明天上午10点开产品评审会。] MATCH
+[cancel] finish after cancel -> [] (expected empty)
+[reuse-after-cancel] -> [明天上午10点开产品评审会。] MATCH
+[memory] RSS 1025 MB, peak 1025 MB
+=== probe done ===

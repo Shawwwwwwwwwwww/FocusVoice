@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FocusVoice — 按住说话，文字已在。</title>
+<meta name="description" content="FocusVoice 是一个住在 Mac 菜单栏里的语音输入层。按住说话，松开即用。">
+<style>
+:root{
+  --bg:#05070b; --bg2:#0a1018; --ink:#f5f7fa; --muted:#8f9bac;
+  --dim:#5d6879; --line:rgba(255,255,255,.10); --blue:#0a84ff; --cyan:#64d2ff;
+  --max:1120px; --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Hiragino Sans GB",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(900px 600px at 72% -10%, rgba(10,132,255,.18), transparent 65%),
+  radial-gradient(700px 500px at 10% 30%, rgba(100,210,255,.08), transparent 70%),
+  linear-gradient(180deg,#05070b,#080d15 55%,#05070b)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(18px);background:rgba(5,7,11,.72);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:58px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:17px}
+.brand img{width:24px;height:24px;border-radius:6px}
+.brand small{font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.08em;margin-left:4px}
+.nav .links{display:flex;gap:26px;color:var(--muted);font-size:13px}
+.nav .links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 20px;border-radius:999px;background:var(--blue);color:white;font-weight:600;font-size:14px;box-shadow:0 10px 30px rgba(10,132,255,.28);transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 14px 36px rgba(10,132,255,.38)}
+.btn.ghost{background:rgba(255,255,255,.06);box-shadow:none;border:1px solid var(--line);color:var(--ink)}
+.hero{padding:92px 0 40px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--dim);font-weight:600;margin-bottom:18px}
+h1{font-size:clamp(46px,7vw,92px);line-height:1.05;letter-spacing:-.045em;margin:0 0 22px;font-weight:700}
+h1 em{font-style:normal;background:linear-gradient(90deg,#fff,#79d4ff 60%,#0a84ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{max-width:650px;margin:0 auto 28px;color:var(--muted);font-size:clamp(16px,2vw,20px);line-height:1.65}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero-shot{margin-top:56px;border-radius:28px;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6),0 0 0 1px var(--line)}
+.hero-shot img{display:block;width:100%}
+section{padding:92px 0;border-top:1px solid rgba(255,255,255,.06)}
+.brand-card{padding:0 0 80px;border-top:0}
+.brand-card img{display:block;width:100%;border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.55),0 0 0 1px var(--line)}
+.section-head{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:end;margin-bottom:36px}
+.section-num{font-size:11px;letter-spacing:.22em;color:var(--dim);font-weight:600}
+h2{font-size:clamp(30px,4.2vw,54px);line-height:1.1;letter-spacing:-.035em;margin:10px 0 0;font-weight:700}
+.body{color:var(--muted);font-size:17px;line-height:1.8;max-width:660px}
+.shot{border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.55),0 0 0 1px var(--line);background:#0b111a}
+.shot img,.shot video{display:block;width:100%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.motion{max-width:980px;margin:0 auto}
+.motion img{display:block;width:100%;border-radius:22px}
+.smallcaps{font-size:10px;letter-spacing:.2em;color:var(--dim);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--muted);border-radius:999px;padding:7px 13px;font-size:12px}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.spec{border:1px solid var(--line);border-radius:16px;padding:18px;background:rgba(255,255,255,.025)}
+.spec b{display:block;font-size:15px;margin-bottom:6px}
+.spec span{color:var(--muted);font-size:13px}
+.cta{padding:110px 0 120px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+.cta h2{margin-bottom:14px}
+.cta p{color:var(--muted);max-width:520px;margin:0 auto 30px}
+footer{border-top:1px solid rgba(255,255,255,.06);padding:28px 0 46px;color:var(--dim);font-size:12px;display:flex;justify-content:space-between;gap:20px}
+footer span:last-child{letter-spacing:.06em}
+@media (max-width:820px){
+  .section-head{grid-template-columns:1fr;gap:16px}
+  .two{grid-template-columns:1fr}
+  .specs{grid-template-columns:1fr}
+  .nav .links{display:none}
+  .hero{padding-top:62px}
+  section{padding:66px 0}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+  <a class="brand" href="#"><img src="assets/icon-1024.png" alt="FocusVoice">FocusVoice <small>FOR MAC</small></a>
+  <div class="links"><a href="#press">交互</a><a href="#live">实时转写</a><a href="#native">原生</a><a href="#download">下载</a></div>
+  <a class="btn" href="../../dist/FocusVoice-0.13.4.dmg">Download</a>
+</div></nav>
+
+<header class="wrap hero">
+  <div class="eyebrow">FOCUSVOICE FOR MACOS</div>
+  <h1>按住说话，<br><em>文字已在。</em></h1>
+  <p class="lede">一个住在菜单栏里的语音输入层。按住鼠标，说一句话；松开，文字已经出现在你正在用的地方。</p>
+  <div class="actions">
+    <a class="btn" href="../../dist/FocusVoice-0.13.4.dmg">Download for macOS</a>
+    <a class="btn ghost" href="#press">看看它怎么工作</a>
+  </div>
+  <div class="hero-shot"><img src="assets/hero-hud-16x9.png" alt="FocusVoice 在 Mac 上实时听写"></div>
+</header>
+
+<section class="brand-card"><div class="wrap">
+  <img src="assets/icon-showcase-16x9.png" alt="FocusVoice 品牌图标展示">
+</div></section>
+
+<section id="press"><div class="wrap">
+  <div class="section-head"><div><div class="section-num">01 / PRESS</div><h2>说，<br>而不是敲。</h2></div>
+  <p class="body">长按左键 0.6 秒，蓄力环在光标旁亮起。松开，继续说。它不弹窗口，不抢焦点，也不要求你切换应用。</p></div>
+  <div class="motion"><img src="assets/motion/ring-demo.gif" alt="蓄力环动效"></div>
+</div></section>
+
+<section id="live"><div class="wrap">
+  <div class="section-head"><div><div class="section-num">02 / LIVE</div><h2>文字，<br>跟着声音生长。</h2></div>
+  <p class="body">SenseVoice 在本机实时转写。话说到一半，文字已经在屏幕上出现；说完，自动写好标点与段落，落到当前输入框。</p></div>
+  <div class="motion"><img src="assets/motion/live-typing.gif" alt="实时转写动效"></div>
+</div></section>
+
+<section id="native"><div class="wrap">
+  <div class="section-head"><div><div class="section-num">03 / NATIVE</div><h2>像系统的<br>一部分。</h2></div>
+  <p class="body">原生 Liquid Glass 浮层、胶囊提示、菜单栏录制状态。macOS 26 上使用原生 Liquid Glass；更早的系统自动回退到毛玻璃。</p></div>
+  <div class="two">
+    <div class="shot"><img src="assets/motion/inserted-toast.gif" alt="已插入提示"></div>
+    <div class="shot"><img src="assets/menubar.png" alt="菜单栏录制状态"></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="section-head"><div><div class="section-num">04 / LIGHT</div><h2>轻，<br>但不妥协。</h2></div>
+  <p class="body">13MB 安装包。模型不塞进安装包里。首次使用点一次「下载模型」，之后完全离线。声音默认不离开你的 Mac。</p></div>
+  <div class="shot"><img src="assets/settings-speech.png" alt="语音模型设置"></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="section-head"><div><div class="section-num">05 / BILINGUAL</div><h2>中文，<br>或 English。</h2></div>
+  <p class="body">右上角一键切换，不用重启。设置、菜单栏、HUD、提示一起切换。</p></div>
+  <div class="shot"><img src="assets/settings-general.png" alt="设置界面"></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="smallcaps">SPECIFICATIONS</div>
+  <h2 style="margin-top:10px">FocusVoice for Mac</h2>
+  <div class="specs">
+    <div class="spec"><b>macOS 13+</b><span>Ventura 或更高；推荐 macOS 14 以上</span></div>
+    <div class="spec"><b>Apple Silicon</b><span>M1 / M2 / M3 / M4</span></div>
+    <div class="spec"><b>13MB</b><span>安装包；模型约 230MB，首次下载</span></div>
+    <div class="spec"><b>本地优先</b><span>默认 SenseVoice 本地识别，可选云端引擎</span></div>
+    <div class="spec"><b>实时出字</b><span>边说边显示，松开自动插入</span></div>
+    <div class="spec"><b>中英界面</b><span>切换即时生效，无需重启</span></div>
+  </div>
+</div></section>
+
+<section class="cta" id="download"><div class="wrap">
+  <div class="eyebrow">READY WHEN YOU ARE</div>
+  <h2>少敲一点。<br>多说一点。</h2>
+  <p>下载 FocusVoice，第一次打开时点一下下载模型。之后，它就在菜单栏里等你。</p>
+  <a class="btn" href="../../dist/FocusVoice-0.13.4.dmg">Download FocusVoice</a>
+</div></section>
+
+<footer class="wrap"><span>FocusVoice · Speak, and it's already written.</span><span>FOCUSVOICE FOR MAC · v0.13.4</span></footer>
+</body>
+</html>

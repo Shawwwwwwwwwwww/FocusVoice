@@ -1,0 +1,8 @@
+# bundle selftest (cwd=/tmp, bundled models)
+## command: DYLD_PRINT_LIBRARIES=1 FocusVoice.app/Contents/MacOS/FocusVoice --selftest-stt /tmp/focusvoice-audio/zh_4s.wav
+dyld[25676]: <277B0D84-369E-3F4F-B1EF-D709263D0F19> <APP>/Contents/Resources/sherpa/libsherpa-onnx-c-api.dylib
+dyld[25676]: <38E898BD-5CB9-32A7-AF32-5F9F181D2C1F> <APP>/Contents/Resources/sherpa/libonnxruntime.dylib
+STT_AVAILABLE: true
+STT_LOCATION: App 内置模型
+STT_MS: 493
+STT_TEXT: 今天下午3点开会，记得带上项目文档。
