@@ -6,3 +6,5 @@ dist/
 *.swp
 .dsh-ref/
 /tmp/
+
+docs/launch/FocusVoice-Notion-Launch.zip
