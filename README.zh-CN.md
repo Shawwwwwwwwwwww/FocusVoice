@@ -31,27 +31,27 @@ FocusVoice 是一个 Swift / AppKit 写的 macOS 菜单栏小工具：在任意�
 ## 功能演示
 
 ### 长按触发 · 声纹蓄力环
-在输入框里按住左键，光标旁出现声纹蓄力环；0.6 秒充满时整圈高亮，松手开始收尾。
+在输入框里按住左键，光标旁出现标准进度蓄力环，从 12 点方向顺时针填充；0.6 秒充满时整圈高亮，松手开始收尾。
 
 <p align="center"><img src="docs/launch/assets/motion/ring-demo.gif" width="720" alt="长按蓄力环"></p>
 
 ### 本地实时转写
 一边说一边出字。HUD 保留完整转录，可用滚轮回看；只有当你停在底部时才自动跟随最新文字。
 
-<p align="center"><img src="docs/launch/assets/motion/live-typing.gif" width="720" alt="实时转写"></p>
+<p align="center"><img src="docs/launch/assets/motion/live-typing-zh.gif" width="720" alt="实时转写"></p>
 
 ### 完成即插入
 点「完成」或松手后，聆听面板直接收起，文字插入当前输入框，鼠标附近出现轻量确认气泡。
 
-<p align="center"><img src="docs/launch/assets/motion/inserted-toast.gif" width="720" alt="插入完成提示"></p>
+<p align="center"><img src="docs/launch/assets/motion/inserted-toast-zh.gif" width="720" alt="插入完成提示"></p>
 
 ### 设置与个性化
 原生玻璃质感设置页：声纹环外观、音效库、权限、模型下载、自定义快捷键与冲突提醒，
 中英文实时切换。
 
 <p align="center">
-  <img src="docs/launch/assets/settings-general.png" width="46%" alt="通用设置">
-  <img src="docs/launch/assets/settings-speech.png" width="46%" alt="语音设置">
+  <img src="docs/launch/assets/zh/settings-general.png" width="46%" alt="通用设置">
+  <img src="docs/launch/assets/zh/settings-speech.png" width="46%" alt="语音设置">
 </p>
 
 ### 轻量安装 · 模型按需下载

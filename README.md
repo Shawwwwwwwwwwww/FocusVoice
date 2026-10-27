@@ -31,7 +31,7 @@ No account, no cloud round-trip, no 200 MB model in the download.
 ## Feature demos
 
 ### Hold-to-talk ring
-Hold the left mouse button in a text field. A voiceprint-style charge ring grows next to the cursor;
+Hold the left mouse button in a text field. A charge ring fills smoothly from 12 o'clock next to the cursor;
 the full highlight appears at the 0.6 s trigger point.
 
 <p align="center"><img src="docs/launch/assets/motion/ring-demo.gif" width="720" alt="Hold-to-talk ring"></p>
@@ -40,21 +40,21 @@ the full highlight appears at the 0.6 s trigger point.
 Words appear while you are still speaking. The HUD keeps the full transcript and can be scrolled
 back with the mouse wheel; it follows the newest text only when you are already at the bottom.
 
-<p align="center"><img src="docs/launch/assets/motion/live-typing.gif" width="720" alt="Streaming transcription"></p>
+<p align="center"><img src="docs/launch/assets/motion/live-typing-en.gif" width="720" alt="Streaming transcription"></p>
 
 ### Insert and go
 Release or press Done. The listening panel is dismissed and the transcript is pasted into the
 focused input. A small confirmation bubble appears near the mouse.
 
-<p align="center"><img src="docs/launch/assets/motion/inserted-toast.gif" width="720" alt="Inserted toast"></p>
+<p align="center"><img src="docs/launch/assets/motion/inserted-toast-en.gif" width="720" alt="Inserted toast"></p>
 
 ### Designed settings
 Native glass panels, voiceprint ring styles, sound library, permissions, model download,
 custom hotkey with conflict warnings, and a live Chinese/English switch.
 
 <p align="center">
-  <img src="docs/launch/assets/settings-general.png" width="46%" alt="General settings">
-  <img src="docs/launch/assets/settings-speech.png" width="46%" alt="Speech settings">
+  <img src="docs/launch/assets/en/settings-general.png" width="46%" alt="General settings">
+  <img src="docs/launch/assets/en/settings-speech.png" width="46%" alt="Speech settings">
 </p>
 
 ### Lightweight in-app model download
