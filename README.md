@@ -31,10 +31,10 @@ No account, no cloud round-trip, no 200 MB model in the download.
 ## Feature demos
 
 ### Hold-to-talk ring
-Hold the left mouse button in a text field. A charge ring fills smoothly from 12 o'clock next to the cursor;
-the full highlight appears at the 0.6 s trigger point.
+Hold the left mouse button in a text field. A voiceprint charge ring grows smoothly around the cursor;
+the full white highlight appears at the 0.6 s trigger point.
 
-<p align="center"><img src="docs/launch/assets/motion/ring-demo.gif" width="720" alt="Hold-to-talk ring"></p>
+<p align="center"><img src="docs/launch/assets/motion/ring-demo-charge.gif" width="720" alt="Hold-to-talk ring"></p>
 
 ### Streaming local transcription
 Words appear while you are still speaking. The HUD keeps the full transcript and can be scrolled
