@@ -96,6 +96,10 @@ NSStatusItem / NSPanel (AppKit)
 - `Sources/CSherpa` — C shim for the vendored sherpa-onnx runtime.
 - `Vendor/sherpa` — arm64 runtime (Apache-2.0, see `NOTICE.md`).
 
+## Download
+
+Get the latest signed DMG from **[Releases](https://github.com/Shawwwwwwwwwwww/FocusVoice/releases/latest)** — the app is around 13 MB, and the speech model downloads on first run.
+
 ## Build from source
 
 Requirements: macOS 13+, Xcode Command Line Tools (Swift 6), Apple Silicon.

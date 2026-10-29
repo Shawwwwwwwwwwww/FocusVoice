@@ -94,6 +94,10 @@ NSStatusItem / NSPanel (AppKit)
 - `Sources/CSherpa` — sherpa-onnx C 桥接；
 - `Vendor/sherpa` — arm64 运行时（Apache-2.0，见 `NOTICE.md`）。
 
+## 下载
+
+最新 DMG 在 **[Releases](https://github.com/Shawwwwwwwwwwww/FocusVoice/releases/latest)**：App 约 13 MB，语音模型首次运行时在 App 内下载。
+
 ## 从源码构建
 
 要求：macOS 13+、Xcode Command Line Tools（Swift 6）、Apple Silicon。
